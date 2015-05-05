@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Company" Class="CompanyLinqDataContextDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=(localdb)\v11.0;Initial Catalog=Company;Integrated Security=True" SettingsObjectName="Company.Properties.Settings" SettingsPropertyName="CompanyConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=PC-PAPI\sqlexpress;Initial Catalog=Company;Persist Security Info=True;User ID=sa" SettingsObjectName="Company.Properties.Settings" SettingsPropertyName="CompanyConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Employee" Member="Employees">
     <Type Name="Employee">
-      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="Designation" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />

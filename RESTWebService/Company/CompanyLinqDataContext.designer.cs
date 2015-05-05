@@ -36,7 +36,7 @@ namespace Company
     #endregion
 		
 		public CompanyLinqDataContextDataContext() : 
-				base(global::Company.Properties.Settings.Default.CompanyConnectionString, mappingSource)
+				base(global::Company.Properties.Settings.Default.CompanyConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -107,7 +107,7 @@ namespace Company
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int Id
 		{
 			get

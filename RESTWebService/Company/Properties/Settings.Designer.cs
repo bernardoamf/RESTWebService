@@ -32,5 +32,16 @@ namespace Company.Properties {
                 return ((string)(this["CompanyConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=PC-PAPI\\sqlexpress;Initial Catalog=Company;Persist Security Info=True" +
+            ";User ID=sa;Password=1234")]
+        public string CompanyConnectionString1 {
+            get {
+                return ((string)(this["CompanyConnectionString1"]));
+            }
+        }
     }
 }
