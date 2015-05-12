@@ -90,14 +90,13 @@ namespace RestWebService
             byte[] PostData = context.Request.BinaryRead(context.Request.ContentLength);
             string str = Encoding.UTF8.GetString(PostData);
             CompanyEmployee e = Deserialize(PostData);
-
+            /*
             Employee emp = new Employee();
             emp.FirstName = e.FirstName;
             emp.LastName = e.LastName;
-            emp.Id = e.EmpCode;
             emp.Designation = e.Designation;
             db.Employees.InsertOnSubmit(emp);
-            db.SubmitChanges();
+            db.SubmitChanges();*/
 
         }
 
@@ -109,7 +108,7 @@ namespace RestWebService
                 byte[] PUTRequestByte = context.Request.BinaryRead(context.Request.ContentLength);
                 context.Response.Write(PUTRequestByte);
 
-                Company.CompanyEmployee emp = Deserialize(PUTRequestByte);
+                /*Company.CompanyEmployee emp = Deserialize(PUTRequestByte);
 
 
                 var employee = (from e in db.Employees
@@ -122,7 +121,7 @@ namespace RestWebService
 
                 db.SubmitChanges();
 
-                WriteResponse("Employee Updated Successfully");
+                WriteResponse("Employee Updated Successfully");*/
             }
             catch (Exception e)
             {
@@ -157,15 +156,15 @@ namespace RestWebService
         {
             try
             {
-                XmlSerializer ds = new XmlSerializer(typeof(Company.Employee));
+                XmlSerializer ds = new XmlSerializer(typeof(Company.CompanyEmployee));
                 MemoryStream memoryStream = new MemoryStream(xmlByteData);
-                CompanyEmployee emp = new CompanyEmployee();
-                emp = (CompanyEmployee)ds.Deserialize(memoryStream);
+                Company.CompanyEmployee emp = new Company.CompanyEmployee();
+                emp = (Company.CompanyEmployee)ds.Deserialize(memoryStream);
                 return emp;
             }
             catch(Exception ex)
             {
-                throw;
+                throw (new Exception("Deserialization Error"));
             }
         }
         private static void WriteResponse(string strMessage)
@@ -176,7 +175,7 @@ namespace RestWebService
         private String Serialize(CompanyEmployee emp)
         {
             String XmlizedString = null;
-            XmlSerializer xs = new XmlSerializer(typeof(Company.Employee));
+            XmlSerializer xs = new XmlSerializer(typeof(Company.CompanyEmployee));
             MemoryStream memoryStream = new MemoryStream();
             XmlTextWriter xmlTextWriter = new XmlTextWriter(memoryStream, Encoding.UTF8);
             xs.Serialize(xmlTextWriter, emp);

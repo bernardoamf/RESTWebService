@@ -43,5 +43,16 @@ namespace Company.Properties {
                 return ((string)(this["CompanyConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=s6yf346b47.database.windows.net;Initial Catalog=Company;User ID=berna" +
+            "rdoamf;Password=w2k3oXPo2k;Connect Timeout=60")]
+        public string CompanyConnectionString2 {
+            get {
+                return ((string)(this["CompanyConnectionString2"]));
+            }
+        }
     }
 }

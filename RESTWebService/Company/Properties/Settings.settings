@@ -18,5 +18,13 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=PC-PAPI\sqlexpress;Initial Catalog=Company;Persist Security Info=True;User ID=sa;Password=1234</Value>
     </Setting>
+    <Setting Name="CompanyConnectionString2" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=s6yf346b47.database.windows.net;Initial Catalog=Company;User ID=bernardoamf;Password=w2k3oXPo2k;Connect Timeout=60&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=s6yf346b47.database.windows.net;Initial Catalog=Company;User ID=bernardoamf;Password=w2k3oXPo2k;Connect Timeout=60</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

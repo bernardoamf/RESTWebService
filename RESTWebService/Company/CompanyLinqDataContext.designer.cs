@@ -36,7 +36,7 @@ namespace Company
     #endregion
 		
 		public CompanyLinqDataContextDataContext() : 
-				base(global::Company.Properties.Settings.Default.CompanyConnectionString1, mappingSource)
+				base(global::Company.Properties.Settings.Default.CompanyConnectionString2, mappingSource)
 		{
 			OnCreated();
 		}
